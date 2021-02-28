@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import rc
 rc('font', family = 'AppleGothic')
-load matlab
+
 
 df = pd.read_excel("사망원인.xlsx")
 df.info()
@@ -131,7 +131,7 @@ plt.subplot(2,2,3)
 plt.axis([2017,2019,3.8,5])  #plt.xlim(), plt.ylim()
 plt.xlabel('Year')
 plt.ylabel('사망률(10만명당)')
-plt.text(2017.8, 4.5, '달리 분류되지 않은 증상, 징후 (R00-R99)')
+plt.text(2017.8, 4.5, '신생물 (C00-D48)')
 plt.xticks(np.arange(2017,2020,1), labels = xticks, fontsize = 9)
 sex = list(set(df9['성별']))
 for i in sex:
